@@ -1,6 +1,10 @@
 # Vim swap files
 *.swp
 
+# Daily binary files
+one
+two
+
 # Prerequisites
 *.d
 
