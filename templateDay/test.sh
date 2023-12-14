@@ -1,9 +1,17 @@
 #!/bin/bash
 
+make
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
 run_test() {
     for i in `ls inputs/$1/test*`; do
         echo "Running $1 on $i"
         ./$1 < $i
+        echo "-------------------"
+        echo
     done
 }
 
