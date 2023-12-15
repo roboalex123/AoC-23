@@ -26,6 +26,11 @@ elif [ "$1" == "2" ]; then
         run_test two
     else
         ./two < inputs/two.txt
+        
+        # if two.txt is not present, run on one.txt
+        if [ $? -ne 0 ]; then
+            ./two < inputs/one.txt
+        fi
     fi
 else
     echo "Usage: $0 [1|2]"
