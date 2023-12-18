@@ -98,6 +98,4 @@ int main() {
     }
 
     cout << "The sum of the point values of all cards is " << sum << endl;
-
-    return 0;
 }
